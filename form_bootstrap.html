@@ -1,0 +1,32 @@
+<form>
+  <div class="mb-3">
+    <h2>Form Pendaftaran Member Perpustakaan</h2>
+    <label for="Nama" class="form-label">Nama    : </label>
+    <input type="text" class="form-control" id="Nama">
+</div>
+<div>
+    <label for="no_telp" class="form-label">No.Telp   : </label>
+    <input type="text" class="form-control" id="no_telp">
+</div>
+<div>
+    Jenis Kelamin : <input type="radio" name="jk" value="Pria">pria<input type="radio" name="jk" value="Wanita">Wanita
+</div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Tanggal Lahir :</label>
+    <input type="date" class="form-control" id="date">
+  </div>
+  <div>
+    Pekerjaan : <select name="jurusan">
+                <option value="Pelajar">Pelajar</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Pegawai">Pegawai</option>
+              </select>
+</div>
+<div>
+      Nama Instansi : <input type="text" name="Instansi" size="16" placeholder="Masukan asal Intsansi" required>
+</div>
+<div>
+      Alamat : <textarea name="alamat" cols="30" rows="3" ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
