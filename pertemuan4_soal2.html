@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Diri </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Masukan Data Diri </h1>
+
+    <form onsubmit="return onSubmitHandler()">
+        <label>
+            Nama:
+            <input type="text" id="namaInput">
+        </label>
+        <label>
+            Umur:
+            <input type="text" id="umurInput">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="dataDiri" onload="onLoadHandler()" ondblclick="onDoubleClickHandler()" onmouseover="onMouseOverHandler()" onmouseout="onMouseOutHandler()">
+        <h2>Data Diri:</h2>
+        <p id="nama"></p>
+        <p id="umur"></p>
+    </div>
+
+    <script>
+        function onSubmitHandler() {
+            var namaInput = document.getElementById('namaInput');
+            var umurInput = document.getElementById('umurInput');
+            var nama = document.getElementById('nama');
+            var umur = document.getElementById('umur');
+
+            nama.textContent = 'Nama: ' + namaInput.value;
+            umur.textContent = 'Umur: ' + umurInput.value;
+
+            namaInput.value = '';
+            umurInput.value = '';
+
+            return false; // Prevent form submission
+        }
+
+        function onLoadHandler() {
+            console.log('Page loaded!');
+        }
+
+        function onDoubleClickHandler() {
+            console.log('Data Diri double-clicked!');
+        }
+
+        function onMouseOverHandler() {
+            console.log('Mouse over Data Diri!');
+        }
+
+        function onMouseOutHandler() {
+            console.log('Mouse out of Data Diri!');
+        }
+    </script>
+</body>
+</html>
